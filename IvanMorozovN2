@@ -1,0 +1,26 @@
+using System;
+using consoleT_6;
+ 
+namespace consoleT_6_2
+{
+   class Program
+   {
+       static void Main(string[] args)
+       {
+           try
+           {
+               Console.Write("Вводите double-числа через пробел: ");
+               string str = Console.ReadLine();
+               Console.WriteLine("Введите a: ");
+               Task2 t = new Task2(str);
+               double a = Double.Parse(Console.ReadLine());
+               Console.WriteLine("Число пар, разность которых равна {0}: {1}", a, t.Count(a));
+           }
+           catch(System.FormatException)
+           {
+               Console.WriteLine("Ввели что-то не то");
+           }
+       }
+   }
+}
+ 
